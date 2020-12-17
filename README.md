@@ -1,7 +1,7 @@
 
 # Image to Speech: Accessibility Helper 
 
-![picture](https://github.com/Team5CSYEFall/Project/images/intr.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/master/images/intr.png)
 
 Machine replication of human functions, like reading, is an ancient dream. However, over the last five decades, machine reading has grown from a dream to reality. 
 Image to speech conversion is a trending aspect of computer technology. It determines an important criterion in which we interact with the system and interfaces across a variety of platforms.
