@@ -15,7 +15,7 @@ The functionality of such a system can help to interpret information within imag
 
 # Process Outline:
 
-![picture](https://github.com/Team5CSYEFall/Project/images/PD.png)
+!(PD.png)
 
 ## Part 1: 
 Here we provide a functionality for the user to upload images they want to read out with a webpage hosted on Amazon S3. Those images will be stored in Dynamodb for the further process.
