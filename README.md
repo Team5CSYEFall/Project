@@ -35,12 +35,12 @@ In the last part of the pipelined the stored extracted text will get converted t
 ## 2. Deploying Amazon API Gateway to set off a dedicated Lambda function, “New Image Uploadt”, which is responsible for initializing the process of generating MP3 files.
 ## 3. Creating and deploying " New Image Upload" Lambda Function
 This lambda function will be doing following tasks:
-a. Inserts/stores the image into a DynamoDB table, where information about all posts is stored.
-b. Run the Amazon recognition job which will extract the text from uploaded image.
-c. Send notification to SNS topic to decouple the process of receiving information about new posts and starting their conversion.
+(a) Inserts/stores the image into a DynamoDB table, where information about all posts is stored.
+(b) Run the Amazon recognition job which will extract the text from uploaded image.
+(c) Send notification to SNS topic to decouple the process of receiving information about new posts and starting their conversion.
 ## 4. Creating and deploying "Text to Audio" Lambda Function
-a. this lambda function is subscribed to our SNS topic whenever a new message appears (which means that a new post should be converted into an audio file). This is the trigger.
-b. it also uses Amazon Polly to convert the text into an audio file in the specified language
+(a) this lambda function is subscribed to our SNS topic whenever a new message appears (which means that a new post should be converted into an audio file). This is the trigger.
+(b) it also uses Amazon Polly to convert the text into an audio file in the specified language
 ## 5. Creating and deploying "Get Audio" Lambda Function 
 this Lambda function retrieves information about the post from the DynamoDB table.
 
