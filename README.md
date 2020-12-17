@@ -1,4 +1,8 @@
+
 # Image to Speech: Accessibility Helper 
+
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
+
 Machine replication of human functions, like reading, is an ancient dream. However, over the last five decades, machine reading has grown from a dream to reality. 
 Image to speech conversion is a trending aspect of computer technology. It determines an important criterion in which we interact with the system and interfaces across a variety of platforms.
 It is a popular feature that lets your computer or phone read images aloud to you and is commonly used as an accessibility feature to help people who have trouble reading on-screen text, but it's also convenient for those who want to be read to.
@@ -10,6 +14,9 @@ So with our project we intend to design a model/system to extract textual inform
 The functionality of such a system can help to interpret information within images for people with disabilities. 
 
 # Process Outline:
+
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
+
 ## Part 1: 
 Here we provide a functionality for the user to upload images they want to read out with a webpage hosted on Amazon S3. Those images will be stored in Dynamodb for the further process.
 ## Part 2: 
@@ -20,3 +27,5 @@ The extracted text from the previous steps will get stored in Dynamodb to be ret
 In the last part of the pipelined the stored extracted text will get converted to speech and an mp3 will be generated as an output. One can play the mp3 by using the functionality made available on the webpage.
 
 # System Architecture: 
+
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
