@@ -1,7 +1,7 @@
 
 # Image to Speech: Accessibility Helper 
 
-![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/intr.JPG)
 
 Machine replication of human functions, like reading, is an ancient dream. However, over the last five decades, machine reading has grown from a dream to reality. 
 Image to speech conversion is a trending aspect of computer technology. It determines an important criterion in which we interact with the system and interfaces across a variety of platforms.
@@ -15,7 +15,7 @@ The functionality of such a system can help to interpret information within imag
 
 # Process Outline:
 
-![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/PD.JPG)
 
 ## Part 1: 
 Here we provide a functionality for the user to upload images they want to read out with a webpage hosted on Amazon S3. Those images will be stored in Dynamodb for the further process.
@@ -28,4 +28,4 @@ In the last part of the pipelined the stored extracted text will get converted t
 
 # System Architecture: 
 
-![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/tfx.JPG)
+![picture](https://github.com/Team5CSYEFall/Assignment-4/blob/main/img/Arch.JPG)
