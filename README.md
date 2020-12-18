@@ -69,10 +69,10 @@ Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functio
 (c) Enable CORS: CORS is a browser security feature that restricts cross-origin HTTP requests that are initiated from scripts running in the browser. If your REST API's resources receive non-simple cross-origin HTTP requests, you need to enable CORS support.
 
 ## 7. Creating a new indentity pool and keep unauthenticated users checked so that anybody can access the application without logging in
-![picture]()
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-18%20080610.png)
 
 #### Note: add the identity pool authentication code in the JS file.
-![picture]()
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20233451.png)
 
 ## 8. Go to the web page to access your Image to Speech application 
  http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
