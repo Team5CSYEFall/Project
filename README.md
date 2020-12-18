@@ -28,15 +28,14 @@ In the last part of the pipelined the stored extracted text will get converted t
 
 # System Architecture: 
 
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Arch.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/IMGtoTextAccessibility_Helper%20(2).png)
 
 # Steps to follow:
 ## 1. Create and host a webpage on Amazon S3
 Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/PD.png)
 
 ## 2. Create an IAM role with the following permissions
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/IAMRole.png)
 
 ## 3. Creating and deploying the Lambda Functions (Ref. the uploaded code)
 This lambda function will be doing following tasks:
@@ -46,24 +45,20 @@ This lambda function will be doing following tasks:
 
 ## 4. Create a SNS Topic
 Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
 
 ## 5. Create an API Gateway and add two methods to it:
 (a) Get: Configure the get method with the "Get Information" lambda
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/API%20GATEWAY%20(1).png)
 (b) Post: Configure the post method with the  "New Image Upload" lambda
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/APIGatewayPost.png)
 
 ## 6. Go to the web page to access your Image to Speech application 
  http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
 (a) Upload a .png or .jpg image, select from the voice options and click on the "Say it!" button
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
-
 (b) You will get a post id. Retrieve the audio file for the generated post id using the search functionality
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
-
 (c) You can play or download the generated audio file using the web interface
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Final.png)
 
 
 
