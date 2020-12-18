@@ -32,17 +32,39 @@ In the last part of the pipelined the stored extracted text will get converted t
 
 # Steps to follow:
 ## 1. Create and host a webpage on Amazon S3
-## 2. Deploying Amazon API Gateway to set off a dedicated Lambda function, “New Image Uploadt”, which is responsible for initializing the process of generating MP3 files.
-## 3. Creating and deploying " New Image Upload" Lambda Function
+Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/PD.png)
+
+## 2. Create an IAM role with the following permissions
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+## 3. Creating and deploying the Lambda Functions (Ref. the uploaded code)
 This lambda function will be doing following tasks:
-(a) Inserts/stores the image into a DynamoDB table, where information about all posts is stored.
-(b) Run the Amazon recognition job which will extract the text from uploaded image.
-(c) Send notification to SNS topic to decouple the process of receiving information about new posts and starting their conversion.
-## 4. Creating and deploying "Text to Audio" Lambda Function
-(a) this lambda function is subscribed to our SNS topic whenever a new message appears (which means that a new post should be converted into an audio file). This is the trigger.
-(b) it also uses Amazon Polly to convert the text into an audio file in the specified language
-## 5. Creating and deploying "Get Audio" Lambda Function 
-this Lambda function retrieves information about the post from the DynamoDB table.
+(a) Create "New Image Upload" Lambda function. This lambda is responsible to upload an image to S3 bucket, start the text detection job and initiate SNS
+(b) Create "Get Information" Lambda function. This lambda retrieves the information about the posts
+(c) Create " Text to Audio" Lambda function. This lambda is responsible to convert the extracted text from the image to audio
+
+## 4. Create a SNS Topic
+Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+## 5. Create an API Gateway and add two methods to it:
+(a) Get: Configure the get method with the "Get Information" lambda
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+(b) Post: Configure the post method with the  "New Image Upload" lambda
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+## 6. Go to the web page to access your Image to Speech application 
+ http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
+(a) Upload a .png or .jpg image, select from the voice options and click on the "Say it!" button
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+(b) You will get a post id. Retrieve the audio file for the generated post id using the search functionality
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
+(c) You can play or download the generated audio file using the web interface
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/.png)
+
 
 
 
