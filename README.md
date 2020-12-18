@@ -35,28 +35,31 @@ In the last part of the pipelined the stored extracted text will get converted t
 Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/staticwebpage.png)
 
-
+Setting to host the static webpage.
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20232321.png)
 
 ## 2. Create an IAM role with the following permissions
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/IAMRole.png)
 
-## 3. Creating and deploying the Lambda Functions (Ref. the uploaded code)
+## 3. Create a DynamoDB with a 'Id' as a partition key
+![picture]()
+
+## 4. Creating and deploying the Lambda Functions (Ref. the uploaded code)
 This lambda function will be doing following tasks:
 (a) Create "New Image Upload" Lambda function. This lambda is responsible to upload an image to S3 bucket, start the text detection job and initiate SNS
 (b) Create "Get Information" Lambda function. This lambda retrieves the information about the posts
 (c) Create " Text to Audio" Lambda function. This lambda is responsible to convert the extracted text from the image to audio
 
-## 4. Create a SNS Topic
+## 5. Create a SNS Topic
 Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
 
-## 5. Create an API Gateway and add two methods to it:
+## 6. Create an API Gateway and add two methods to it:
 (a) Get: Configure the get method with the "Get Information" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/API%20GATEWAY%20(1).png)
 (b) Post: Configure the post method with the  "New Image Upload" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/APIGatewayPost.png)
 
-## 6. Go to the web page to access your Image to Speech application 
+## 7. Go to the web page to access your Image to Speech application 
  http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
 (a) Upload a .png or .jpg image, select from the voice options and click on the "Say it!" button
 (b) You will get a post id. Retrieve the audio file for the generated post id using the search functionality
