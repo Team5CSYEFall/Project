@@ -34,6 +34,7 @@ In the last part of the pipelined the stored extracted text will get converted t
 ## 1. Create and host a webpage on Amazon S3
 Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/staticwebpage.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20232321.png)
 
 ## 2. Create an IAM role with the following permissions
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/IAMRole.png)
