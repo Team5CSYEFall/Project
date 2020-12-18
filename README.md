@@ -58,8 +58,10 @@ Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functio
 ## 6. Create an API Gateway and add two methods to it:
 (a) Get: Configure the get method with the "Get Information" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/API%20GATEWAY%20(1).png)
+
 ### Setup url query string parameter 
-![picture]()
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20233705.png)
+
 (b) Post: Configure the post method with the  "New Image Upload" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/APIGatewayPost.png)
 (c) Enable CORS: CORS is a browser security feature that restricts cross-origin HTTP requests that are initiated from scripts running in the browser. If your REST API's resources receive non-simple cross-origin HTTP requests, you need to enable CORS support.
