@@ -35,7 +35,8 @@ In the last part of the pipelined the stored extracted text will get converted t
 Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/staticwebpage.png)
 
-Setting to host the static webpage.
+### Setting to host the static webpage.
+
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20232321.png)
 
 ## 2. Create an IAM role with the following permissions
@@ -52,6 +53,7 @@ This lambda function will be doing following tasks:
 
 ## 5. Create a SNS Topic
 Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
+![picture]()
 
 ## 6. Create an API Gateway and add two methods to it:
 (a) Get: Configure the get method with the "Get Information" lambda
