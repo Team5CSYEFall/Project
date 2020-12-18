@@ -57,7 +57,7 @@ This lambda function will be doing following tasks:
 Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20233451.png)
 
-## 6. Create an API Gateway and add two methods to it:
+## 6. Create an API Gateway and add two methods to it
 (a) Get: Configure the get method with the "Get Information" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/API%20GATEWAY%20(1).png)
 
@@ -67,7 +67,14 @@ Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functio
 (b) Post: Configure the post method with the  "New Image Upload" lambda
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/APIGatewayPost.png)
 (c) Enable CORS: CORS is a browser security feature that restricts cross-origin HTTP requests that are initiated from scripts running in the browser. If your REST API's resources receive non-simple cross-origin HTTP requests, you need to enable CORS support.
-## 7. Go to the web page to access your Image to Speech application 
+
+## 7. Creating a new indentity pool and keep unauthenticated users checked so that anybody can access the application without logging in
+![picture]()
+
+#### Note: add the identity pool authentication code in the JS file.
+![picture]()
+
+## 8. Go to the web page to access your Image to Speech application 
  http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
 (a) Upload a .png or .jpg image, select from the voice options and click on the "Say it!" button
 (b) You will get a post id. Retrieve the audio file for the generated post id using the search functionality
