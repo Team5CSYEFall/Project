@@ -72,7 +72,7 @@ Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functio
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-18%20080610.png)
 
 #### Note: add the identity pool authentication code in the JS file.
-![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20233451.png)
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-18%20102431.png)
 
 ## 8. Go to the web page to access your Image to Speech application 
  http://projectaudiobucket.s3-website-us-east-1.amazonaws.com/
