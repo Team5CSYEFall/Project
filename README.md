@@ -34,6 +34,7 @@ In the last part of the pipelined the stored extracted text will get converted t
 ## 1. Create and host a webpage on Amazon S3
 Static webpages are the webpages containing static content or client-side scripts. We’re using static webpage here to support serverless architecture. We’re using Amazon SDKs to write, configure, set end points and update the webpages for static web hosting.(Upload HTML, CSS and JS file to S3).
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/staticwebpage.png)
+#### Note: Replace API_Endpoint with your API Gateway generated endpoint.
 
 ### Setting to host the static webpage.
 
@@ -50,6 +51,7 @@ This lambda function will be doing following tasks:
 (a) Create "New Image Upload" Lambda function. This lambda is responsible to upload an image to S3 bucket, start the text detection job and initiate SNS
 (b) Create "Get Information" Lambda function. This lambda retrieves the information about the posts
 (c) Create " Text to Audio" Lambda function. This lambda is responsible to convert the extracted text from the image to audio
+#### Note: replace Table_Name with your original DynamoDB table name and replace SNS_Topic with your SNS Topic name
 
 ## 5. Create a SNS Topic
 Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functions and specify the SNS topic in it.
