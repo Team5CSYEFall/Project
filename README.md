@@ -42,7 +42,7 @@ Setting to host the static webpage.
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/IAMRole.png)
 
 ## 3. Create a DynamoDB with a 'Id' as a partition key
-![picture]()
+![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Screenshot%202020-12-17%20233037.png)
 
 ## 4. Creating and deploying the Lambda Functions (Ref. the uploaded code)
 This lambda function will be doing following tasks:
