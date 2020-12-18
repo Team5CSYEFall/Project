@@ -82,6 +82,10 @@ Add a trigger to the New Image Upload(New Post) and Text-to-Audio lambda functio
 
 ![picture](https://github.com/Team5CSYEFall/Project/blob/main/images/Final.png)
 
+### Application demo:
+https://youtu.be/uzqcZQBhyTs
+
+
 
 
 
